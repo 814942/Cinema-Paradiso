@@ -19,11 +19,11 @@ export default defineConfig(({ mode }) => {
             proxy.on("error", (err) => {
               console.log("Proxy error:", err);
             });
-            proxy.on("proxyReq", (proxyReq, req) => {
+            proxy.on("proxyReq", (_proxyReq, req) => {
               console.log("Sending request to:", req.method, req.url);
             });
-            proxy.on("proxyRes", (proxyRes, req) => {
-              console.log(`Received ${proxyRes.statusCode} from ${req.url}`);
+            proxy.on("proxyRes", (_proxyRes, req) => {
+              console.log(`Received ${_proxyRes.statusCode} from ${req.url}`);
             });
           },
         },
