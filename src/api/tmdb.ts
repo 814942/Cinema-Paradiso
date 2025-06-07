@@ -4,12 +4,10 @@ export const config = {
 };
 
 const TMDB_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-console.log("🚀 ~ TMDB_BASE_URL:", TMDB_BASE_URL);
 
 export default async function handler(req: Request) {
   const { searchParams } = new URL(req.url);
   const path = searchParams.get("path");
-  console.log("🚀 ~ GET ~ path:", path);
   if (!path) {
     return new Response(JSON.stringify({ error: "Missing path param" }), {
       status: 400,
@@ -18,7 +16,6 @@ export default async function handler(req: Request) {
 
   // Rebuild the URL
   const url = new URL(`${TMDB_BASE_URL}/${path}`);
-  console.log("🚀 ~ GET ~ url:", url);
   searchParams.forEach((value, key) => {
     if (key !== "path") url.searchParams.append(key, value);
   });
