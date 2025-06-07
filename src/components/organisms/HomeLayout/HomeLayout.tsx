@@ -1,8 +1,8 @@
-import HeroSection from "../molecules/HeroSection"
-import PopularSection from "../molecules/PopularSection"
-import ContinueWatchingSection from "../molecules/ContinueWatchingSection"
-import { Trailer } from "../molecules/Trailer"
-import { GenresFilters } from "../molecules/GenresFilters"
+import HeroSection from "../../molecules/HeroSection/HeroSection"
+import PopularSection from "../../molecules/PopularSection/PopularSection"
+import ContinueWatchingSection from "../../molecules/ContinueWatching/ContinueWatchingSection"
+import { Trailer } from "../../molecules/Trailer/Trailer"
+import { GenresFilters } from "../../molecules/GenreFilters/GenresFilters"
 
 export default function HomeLayout() {
   return (

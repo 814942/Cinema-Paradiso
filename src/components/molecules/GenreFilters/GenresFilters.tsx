@@ -1,8 +1,8 @@
-import useApi from "../../hooks/useApi"
-import type { IGenresData } from "../../types/genres.types"
-import { Loading } from '../atoms/State/Loading';
-import { Error } from '../atoms/State/Error';
-import { Chip } from '../atoms/Chip';
+import useApi from "../../../hooks/useApi"
+import type { IGenresData } from "../../../types/genres.types"
+import { Loading } from '../../atoms/State/Loading';
+import { Error } from '../../atoms/State/Error';
+import { Chip } from '../../atoms/Chip/Chip';
 
 export function GenresFilters() {
   const { data, isLoading, error } = useApi<IGenresData>('genre/movie/list');

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../atoms/Button';
+import { Button } from '../../atoms/Button/Button';
 
 interface ErrorBoundaryProps {
   children: ReactNode;

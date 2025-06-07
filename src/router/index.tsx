@@ -3,7 +3,7 @@ import App from "../App";
 import Home from "../pages/home/Home";
 import Movie from "../pages/tv-show/TVShow";
 import TVShow from "../pages/tv-show/TVShow";
-import { ErrorFallback } from "../components/molecules/ErrorFallback";
+import { ErrorFallback } from "../components/molecules/ErrorFallback/ErrorFallback";
 
 export const routes = [
   {

@@ -1,7 +1,7 @@
 import Card from "./Card"
-import { Loading } from '../atoms/State/Loading';
-import { Error } from '../atoms/State/Error';
-import type { Movie } from "../../types/movies.types";
+import { Loading } from '../../atoms/State/Loading';
+import { Error } from '../../atoms/State/Error';
+import type { Movie } from "../../../types/movies.types";
 
 interface Props {
   title?: string

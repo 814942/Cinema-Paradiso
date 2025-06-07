@@ -1,4 +1,4 @@
-import Image from '../atoms/Image'
+import Image from '../../atoms/Image/Image'
 
 interface CardProps {
   title: string

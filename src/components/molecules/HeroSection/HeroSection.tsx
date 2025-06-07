@@ -1,6 +1,6 @@
-import CardContainer from "./CardContainer"
-import useApi from "../../hooks/useApi"
-import type { MovieResponse } from "../../types/movies.types"
+import CardContainer from "../Card/CardContainer"
+import useApi from "../../../hooks/useApi"
+import type { MovieResponse } from "../../../types/movies.types"
 
 export default function HeroSection() {
   const { data, error, isLoading } = useApi<MovieResponse>('movie/top_rated')
