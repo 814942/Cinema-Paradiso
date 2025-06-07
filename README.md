@@ -2,6 +2,10 @@
 
 **CineParadiso** es una aplicación web interactiva construida con React, Vite, TailwindCSS y la API pública de [The Movie Database (TMDB)](https://www.themoviedb.org/). Permite explorar trailers, películas populares, continuar viendo, y navegar por géneros — todo con una interfaz moderna, inspirada en plataformas de streaming.
 
+[![Ver Demo](https://img.shields.io/badge/Ver-Demo-blue?style=for-the-badge)](https://cinema-paradiso-inky.vercel.app/)
+[![Storybook](https://img.shields.io/badge/Ver-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://cinema-paradiso-storybook.vercel.app/?path=/docs/atoms-button--docs)
+[![LinkedIn](https://img.shields.io/badge/Conectar-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-garay-dev/)
+
 ---
 
 ## 🚀 Tech Stack
@@ -12,6 +16,43 @@
 - 🛠️ Vite
 - 🌐 TMDB API v3
 - 📦 TypeScript
+- 📚 Storybook (para documentación de componentes)
+
+## 📖 Storybook
+
+La documentación de los componentes está disponible en Storybook, donde puedes explorar y probar cada componente de forma aislada.
+
+### 🚀 Ver Storybook Online
+
+[![Storybook](https://img.shields.io/badge/Ver_Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://cinema-paradiso-storybook.vercel.app/?path=/docs/atoms-button--docs)
+
+### 🛠️ Ejecutar Storybook localmente
+
+1. Clona el repositorio
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia Storybook:
+   ```bash
+   npm run storybook
+   ```
+4. Abre [http://localhost:6006](http://localhost:6006) en tu navegador
+
+### 📦 Componentes documentados
+
+- 🎨 **Atoms**: Componentes atómicos reutilizables
+
+  - Botones
+  - Chips
+  - Imágenes
+  - ...y más
+
+- 🧩 **Molecules**: Componentes compuestos
+
+  - Cards
+  - Secciones
+  - ...y más
 
 ---
 
@@ -77,7 +118,5 @@ npm run dev
 
 ---
 
-🤘 Autor
+🤘 by
 Pablo Garay
-Fulstack SSR Developer
-LinkedIn | Estudio Lambda
