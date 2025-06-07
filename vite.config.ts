@@ -1,41 +1,10 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
-
+export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
-    server: {
-      proxy: {
-        "/api/tmbd": {
-          target: env.VITE_API_BASE_URL,
-          changeOrigin: true,
-          secure: false,
-          rewrite: (path) => path.replace(/^\/api\/tmdb/, ""),
-          configure: (proxy) => {
-            proxy.on("error", (err) => {
-              console.log("Proxy error:", err);
-            });
-            proxy.on("proxyReq", (_proxyReq, req) => {
-              console.log("Sending request to:", req.method, req.url);
-            });
-            proxy.on("proxyRes", (_proxyRes, req) => {
-              console.log(`Received ${_proxyRes.statusCode} from ${req.url}`);
-            });
-          },
-        },
-      },
-    },
-    define: {
-      "import.meta.env.VITE_API_BASE_URL": JSON.stringify(
-        process.env.VITE_API_BASE_URL
-      ),
-      "import.meta.env.VITE_API_ACCESS_KEY": JSON.stringify(
-        process.env.VITE_API_ACCESS_KEY
-      ),
-    },
   };
 });
