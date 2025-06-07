@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build -o .storybook-static",
-    "build:all": "npm run build && npm run build:storybook"
+    "build:storybook": "storybook build -o .storybook-static"
   },
   "dependencies": {
     "axios": "^1.9.0",
