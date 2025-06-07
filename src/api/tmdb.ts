@@ -6,7 +6,7 @@ export const config = {
 const TMDB_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 console.log("🚀 ~ TMDB_BASE_URL:", TMDB_BASE_URL);
 
-export default async function GET(req: Request) {
+export default async function handler(req: Request) {
   const { searchParams } = new URL(req.url);
   const path = searchParams.get("path");
   console.log("🚀 ~ GET ~ path:", path);
