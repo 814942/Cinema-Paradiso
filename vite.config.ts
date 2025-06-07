@@ -10,11 +10,11 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), tailwindcss()],
     server: {
       proxy: {
-        "/api": {
+        "/api/tmbd": {
           target: env.VITE_API_BASE_URL,
           changeOrigin: true,
           secure: false,
-          rewrite: (path) => path.replace(/^\/api/, ""),
+          rewrite: (path) => path.replace(/^\/api\/tmdb/, ""),
           configure: (proxy) => {
             proxy.on("error", (err) => {
               console.log("Proxy error:", err);
