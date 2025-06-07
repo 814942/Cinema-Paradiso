@@ -1,7 +1,12 @@
 import Axios from "axios";
 
+const BASE_URL =
+  import.meta.env.VITE_ENV === "DEV"
+    ? "/api"
+    : import.meta.env.VITE_API_BASE_URL;
+
 const axios = Axios.create({
-  baseURL: "/api",
+  baseURL: BASE_URL,
   headers: {
     "Content-Type": "application/json",
     accept: "application/json",
