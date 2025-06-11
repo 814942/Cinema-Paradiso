@@ -12,6 +12,8 @@ export default function PopularSection() {
       layout="popular"
       isLoading={isLoading}
       error={error?.message}
+      width="w-[50%]"
+      slice={2}
     />
   )
 }

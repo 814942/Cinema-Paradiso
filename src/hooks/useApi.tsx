@@ -20,18 +20,20 @@ const DEFAULT_PARAMS: IParams = {
 
 export const useApi = <T,>(path: string, params?: Partial<IParams>) => {
   const [data, setData] = useState<T | null>(null);
+  const [status, setStatus] = useState<number | null>(null);
   const [error, setError] = useState<RequestError | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true);
-      const { data: responseData } = await axios.get(`/${path}`, { 
+      const { data: responseData, status } = await axios.get(`/${path}`, { 
         params: { 
           ...DEFAULT_PARAMS, 
           ...(params || {}) 
         } 
       });
+      setStatus(status);
 
       setData(responseData as T);
       setError(null);
@@ -60,7 +62,8 @@ export const useApi = <T,>(path: string, params?: Partial<IParams>) => {
   return { 
     data, 
     isLoading, 
-    error 
+    error,
+    status 
   };
 };
 

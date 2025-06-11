@@ -9,7 +9,7 @@ export const ErrorFallback = () => (
       </p>
       <button
         onClick={() => window.location.reload()}
-        className="px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-md transition-colors mr-2"
+        className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition-colors mr-2"
       >
         Recargar página
       </button>

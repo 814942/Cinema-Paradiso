@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/home/Home";
-import Movie from "../pages/tv-show/TVShow";
+import Movie from "../pages/movie/Movie";
 import TVShow from "../pages/tv-show/TVShow";
+import Search from "../pages/search/Search";
 import { ErrorFallback } from "../components/molecules/ErrorFallback/ErrorFallback";
 
 export const routes = [
@@ -22,6 +23,10 @@ export const routes = [
       { 
         path: "movie/:id", 
         element: <Movie /> 
+      },
+      {
+        path: "/search",
+        element: <Search />
       },
     ],
   },

@@ -11,6 +11,8 @@ export default function HeroSection() {
       layout="hero"
       isLoading={isLoading}
       error={error?.message}
+      width="w-full"
+      slice={1}
     />
   )
 }

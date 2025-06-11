@@ -48,6 +48,7 @@ export const Image: React.FC<ImageProps> = ({
         alt={alt}
         onLoad={() => setIsLoading(false)}
         onError={handleError}
+        loading='lazy'
         className={`w-full h-full object-cover transition-opacity duration-200 ${
           isLoading ? 'opacity-0' : 'opacity-100'
         } ${className}`}
